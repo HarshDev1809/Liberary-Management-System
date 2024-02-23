@@ -1,0 +1,40 @@
+.sign-in{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in .form-div{
+    border : 1px solid black;
+    width: 30%;
+    height: 80%;
+}
+
+.form-div div{
+    border: 1px solid black;
+    height: 20%;
+    width: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.form-div form{
+    border: 1px solid black;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+form input{
+    width: 80%;
+    height: 15%;
+}

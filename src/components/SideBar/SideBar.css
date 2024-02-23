@@ -1,0 +1,14 @@
+.side-bar{
+    border: 1px solid black;
+    position: fixed;
+    top : 10vh;
+    height: 90vh;
+    width: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.side-bar button {
+    height: 10%;
+}
