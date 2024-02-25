@@ -1,0 +1,21 @@
+.book-drop-down{
+    width: 100%;
+}
+
+.book-drop-down button{
+    width: 100%;
+}
+
+.book-drop-down .drop-down-menu{
+    list-style-type:none;
+    list-style-position: inside;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+
+}
+
+.book-drop-down .drop-down-menu li{
+    width: 100%;
+}
+

@@ -1,16 +1,3 @@
-.side-bar{
-    border: 1px solid black;
-    position: fixed;
-    top : 10vh;
-    height: 90vh;
-    width: 20vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-/* ----------------------------------------------- */
-
 .drop-down{
     width: 100%;
 }
@@ -31,3 +18,4 @@
 .drop-down .drop-down-menu li{
     width: 100%;
 }
+

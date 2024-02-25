@@ -1,0 +1,21 @@
+.customer-drop-down{
+    width: 100%;
+}
+
+.customer-drop-down button{
+    width: 100%;
+}
+
+.customer-drop-down .drop-down-menu{
+    list-style-type:none;
+    list-style-position: inside;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+
+}
+
+.customer-drop-down .drop-down-menu li{
+    width: 100%;
+}
+

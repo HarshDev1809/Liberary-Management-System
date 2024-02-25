@@ -7,6 +7,9 @@ import HomePage from './pages/HomePage/HomePage';
 import LandingPage from './pages/LandingPage/LandingPage';
 import NewBook from './pages/NewBook/NewBook';
 import NewCustomer from './pages/NewCustomer/NewCustomer';
+import Books from './pages/Books/Books';
+
+
 
 function App() {
   return (
@@ -18,6 +21,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path='/create/book' element={<NewBook />} />
         <Route path='/create/customer' element={<NewCustomer />} />
+        <Route path="/books" element={<Books/>}/>
       </Routes>
     </Router>
   );

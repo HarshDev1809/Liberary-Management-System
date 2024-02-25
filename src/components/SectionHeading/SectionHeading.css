@@ -1,0 +1,9 @@
+.section-heading {
+    height: 10%;
+    width: 100%;
+    border : 1px solid sandybrown;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+}

@@ -1,0 +1,71 @@
+.new-customer .new-customer-div{
+    height: 90vh;
+    width: 80vw;
+    border: 1px solid black;
+    position: relative;
+    top: 10vh;
+    left: 20vw;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+.new-customer .new-customer-div form{
+    border: 1px solid black;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 10px;
+}
+
+.new-customer .new-customer-div div{
+    border: 1px solid black;
+}
+
+.new-customer .new-customer-div form input{
+    font-size: 1rem;
+}
+
+.new-customer .new-customer-div form div{
+    font-size: 1.3em;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.3em;
+    width: 100%;
+}
+
+.new-customer .new-customer-div form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20%;
+    height: 8%;
+    top: 36vh;
+   
+}
+
+.new-customer input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  .new-customer input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+/* .new-customer .button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200%;
+} */
