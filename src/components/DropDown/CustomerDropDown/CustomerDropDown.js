@@ -16,11 +16,21 @@ function CustomerDropDown(){
         navigate("/create/customer");
     }
 
+    const goToCustomers = ()=>{
+        navigate("/customers");
+    }
+
+    const goToIssueBook = ()=>{
+        navigate("/customers/issue");
+    }
+
     return <div className="customer-drop-down">
         <button onClick={toggleIsOpen}>Customer</button>
         {isOpen && (
             <ul className="drop-down-menu">
                 <li><button onClick={goToNewCustomer}>New Customer</button></li>
+                <li><button onClick={goToCustomers}>Customers List</button></li>
+                <li><button onClick={goToIssueBook}>Issue Book</button></li>
             </ul>
         )}
     </div>

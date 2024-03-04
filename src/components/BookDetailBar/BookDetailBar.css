@@ -1,0 +1,34 @@
+.book-detail-bar{
+    border : 1px solid black;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    padding: 5px;
+}
+
+
+.book-detail-bar div{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    flex-wrap: wrap;
+}
+
+.book-detail-bar .title{
+    height:40%;
+    width: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-detail-bar .author{
+
+}
+
+.book-detail-bar small{
+    color: gray;
+}
+

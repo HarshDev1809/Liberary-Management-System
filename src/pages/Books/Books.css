@@ -1,0 +1,70 @@
+.books .books-div{
+    border: 1px solid red;
+    height: 90vh;
+    width: 80vw;
+    position: relative;
+    top:10vh;
+    left:20vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.books .section-heading{
+    width: 100%;
+}
+
+.books .left-panel{
+    border: 1px solid yellow;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.books form button{
+    justify-self: center;
+    align-self: center;
+}
+
+.books .left-panel div{
+    border: 1px solid yellow;
+    height: 8vh;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+}
+
+.books form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.books .right-panel{
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.books .sub-div{
+    display: flex;
+    border: 1px solid green;
+    height: 90%;
+    width: 95%;
+    padding : 10px
+}

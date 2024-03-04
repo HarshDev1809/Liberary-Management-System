@@ -1,0 +1,53 @@
+.customer-details-div{
+    position: relative;
+    top: 10vh;
+    left: 20vw;
+    border: 1px solid red;
+    height: 90vh;
+    width: 80vw;
+}
+
+.customer-details-div div{
+    border: 1px solid black
+}
+
+.customer-details .left-panel{
+    border: 2px solid red;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.customer-details form{
+    height: 50%;
+    gap: 15px;
+    border: 1px solid brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+.customer-details .sub-div{
+    display: flex;
+    border: 1px solid green;
+    height: 90%;
+    width: 95%;
+    padding : 10px
+}
+
+.customer-details .right-panel{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-details input{
+    width: 100%;
+}

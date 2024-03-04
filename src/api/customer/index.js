@@ -14,3 +14,26 @@ export const createNewCustomerApi = async(customerDetails) => {
         return err.response.data
     }
 }
+
+export const getCustomerApi = async(query) => {
+    try{
+        const token = sessionStorage.getItem("token");
+        const response = await axios.get(`http://localhost:8000/api/customers/user`,{
+        params : query
+        })
+        console.log(response)
+        return response;
+    }catch(err){
+        return err.response.data
+    }
+}
+
+export const getCustomerByIdApi = async(id)=>{
+    try{
+        const response = await axios.get(`http://localhost:8000/api/customers/user/${id}`)
+        console.log(response);
+        return response;
+    }catch(err){
+        return err
+    }
+}

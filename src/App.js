@@ -8,6 +8,9 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import NewBook from './pages/NewBook/NewBook';
 import NewCustomer from './pages/NewCustomer/NewCustomer';
 import Books from './pages/Books/Books';
+import CustomerDetails from './pages/CustomerDetail/CustomerDetail';
+import Customer from './pages/Customer/Customer';
+import IssuePage from './pages/IssuePage/IssuePage';
 
 
 
@@ -22,6 +25,9 @@ function App() {
         <Route path='/create/book' element={<NewBook />} />
         <Route path='/create/customer' element={<NewCustomer />} />
         <Route path="/books" element={<Books/>}/>
+        <Route path='/customers' element={<CustomerDetails />} />
+        <Route path='/customers/:id' element={<Customer />} />
+        <Route path="/customers/issue" element={<IssuePage />} />
       </Routes>
     </Router>
   );

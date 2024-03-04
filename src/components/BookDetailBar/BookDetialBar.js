@@ -1,26 +1,20 @@
+import "./BookDetailBar.css"
+
 function BookDetailBar(props) {
   return (
     <div className="book-detail-bar">
-      <div>
-        <div>
-          <img src={props.book.coverUrl} alt="Book Cover"></img>
+        <div className="title">
+            <h4>{props.book.title}</h4>
         </div>
-        <div>
-          <p>{`${props.book.edition} Edition`}</p>
+        <div className="author">
+            <p>{props.book.author}</p>
         </div>
-      </div>
-      <div>
-        <div>
-          <p>{props.book.title}</p>
+        <div className="edition">
+            <small>{`${props.book.edition} Edition`}</small>
         </div>
-        <div>
-          <p>{props.book.author}</p>
+        <div className="uId">
+            <small>{props.book.uId}</small>
         </div>
-        <div>
-          <p>{props.book.uId}</p>
-        </div>
-      </div>
-      <div>{props.book.tags.map(()=>)}</div>
     </div>
   );
 }

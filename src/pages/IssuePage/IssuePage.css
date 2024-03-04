@@ -1,0 +1,16 @@
+.issue-page .issue-page-div{
+    height: 90vh;
+    width: 80vw;
+    border: 1px solid red;
+    position: relative;
+    top: 10vh;
+    left: 20vw
+}
+
+.issue-page .issue-page-div div{
+    border: 1px solid red;
+}
+
+.issue-page .sub-div {
+    border: 1px solid black;
+}

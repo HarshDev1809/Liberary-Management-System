@@ -1,0 +1,66 @@
+.customer .customer-div{
+    border : 1px solid red;
+    height: 90vh;
+    width: 80vw;
+    position: relative;
+    top: 10vh;
+    left : 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer div{
+    border : 1px solid black;
+}
+
+.customer .sub-div{
+    border : 1px solid red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.customer .back-btn{
+    width: 70%;
+}
+
+.customer .customer-detail-div{
+    width: 70%;
+    height: 80%;
+}
+
+.customer .name{
+    font-size: 4rem;
+    height: 40%;
+}
+
+.customer .h-10{
+    height: 10%;
+}
+
+.customer .books{
+    height: 20%;
+}
+
+.customer .flex{
+    display: flex;
+}
+
+.customer .jc-c{
+    justify-content: center;
+}
+
+.customer .ai-c{
+    align-items: center;
+}
+
+.customer .customer-detail-div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
