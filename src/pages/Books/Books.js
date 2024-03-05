@@ -22,26 +22,42 @@ function Books(){
     };
 
     const updateTitle = (e) => {
-        const filteredBooks = books[0].filter(book=>{
-            if(book.author.toLowerCase().includes(e.target.value.toLowerCase()) || book.title.toLowerCase().includes(e.target.value.toLowerCase()) || book.uId == query.uId){
+        setTitle(e.target.value);
+        const filteredBooks = books.filter(book=>{
+            if(book.title.toLowerCase().includes(e.target.value.toLowerCase())){
                 return book
             }
-        })
-        console.log(filteredBooks)
-        setTitle(e.target.value);
+        });
+        setDislayBook(filteredBooks);
+        
     }
 
     const updateUid = (e) => {
         setUId(e.target.value);
+        const filteredBooks = books.filter(book=>{
+            if(book.uId == e.target.value){
+                return book
+            }
+        });
+        if(e.target.value === ""){
+            setDislayBook(books);
+            return;
+        }
+        setDislayBook(filteredBooks);
     }
 
     const updateAuthor = (e)=>{
         setAuthor(e.target.value);
+        const filteredBooks = books.filter(book=>{
+            if(book.author.toLowerCase().includes(e.target.value.toLowerCase())){
+                return book
+            }
+        });
+        setDislayBook(filteredBooks);
     }
 
     const showBooks = (books)=>{
-        // console.log(books)
-        setDislayBook([]);
+        // setDislayBook([]);
         return <div className="right-panel">
             {
                 books.map((book) => {
@@ -49,35 +65,37 @@ function Books(){
                 })
             }
         </div>
-
     }
 
     const fetchBooks = async()=>{
-        const {data} = await getBooksApi();
-        setBooks(previousBooks => [...previousBooks,data]);
-        setDislayBook(previousBooks => [...previousBooks,data]);
+        const response = await getBooksApi();
+        // setBooks(previousBooks => [...previousBooks,data]);
+        // setDislayBook(previousBooks => [...previousBooks,data]);
+        console.log(response)
+        setBooks(response.data);
+        setDislayBook(response.data);
         setIsLoading(false);
-        
+        console.log("out")
     }
 
     useEffect(()=>{
         fetchBooks();
 
-        return () => {}
+        return () => {};
     },[])
 
-    const search = (e) =>{
-        e.preventDefault();
-        setDislayBook([])
-        const filteredBooks = books[0].filter(book=>{
-            if(book.author.toLowerCase().includes(query.author.toLowerCase()) || book.title.toLowerCase().includes(query.author.toLowerCase()) || book.uId == query.uId){
-                return book
-            }
-        })
-        console.log(filteredBooks)
-        setDislayBook(previousBooks => [...previousBooks,filteredBooks]);
-        console.log(displayBook)
-    }
+    // const search = (e) =>{
+    //     e.preventDefault();
+    //     setDislayBook([])
+    //     const filteredBooks = books[0].filter(book=>{
+    //         if(book.author.toLowerCase().includes(query.author.toLowerCase()) || book.title.toLowerCase().includes(query.author.toLowerCase()) || book.uId == query.uId){
+    //             return book
+    //         }
+    //     })
+    //     console.log(filteredBooks)
+    //     setDislayBook(previousBooks => [...previousBooks,filteredBooks]);
+    //     console.log(displayBook)
+    // }
 
     return <div className="books">
         <Header isSignedIn = {true} />
@@ -88,7 +106,7 @@ function Books(){
             </div>
             <div className="sub-div">
                 <div className="left-panel">
-                    <form onSubmit={search}>
+                    <form>
                     <div>
                         <label for="titleInput">Title : </label>
                         <input type="text" id="titleInput" placeholder="Title" value = {title} onChange={updateTitle}></input>
@@ -101,10 +119,9 @@ function Books(){
                         <label for="uIdInput">Id : </label>
                         <input id="uIdInput" type="number" placeholder="Id" value = {uId} onChange={updateUid}></input>
                     </div>
-                    <button type = "submit">Search</button>
                     </form>
                 </div>
-                    {isLoading? <Loader /> : showBooks(displayBook[0])}
+                    {isLoading? <Loader /> : showBooks(displayBook)}
             </div>
         </div>
     </div>

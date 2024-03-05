@@ -54,20 +54,20 @@ function CustomerDetails() {
     setDisplayedCustomers(fetchedCustomer);
   };
 
-  const updatePhoneNumber = (e) => {
-    setPhoneNumber(e.target.value);
-    customerDetail.phoneNumber = e.target.value;
-    const fetchedCustomer = customers.filter((customer) => {
-      if (customer.phoneNumber === e.target.value) {
-        return customer;
-      }
-    });
-    if (e.target.value === "") {
-      setDisplayedCustomers(customers);
-      return;
-    }
-    setDisplayedCustomers(fetchedCustomer);
-  };
+  // const updatePhoneNumber = (e) => {
+  //   setPhoneNumber(e.target.value);
+  //   customerDetail.phoneNumber = e.target.value;
+  //   const fetchedCustomer = customers.filter((customer) => {
+  //     if (customer.phoneNumber === e.target.value) {
+  //       return customer;
+  //     }
+  //   });
+  //   if (e.target.value === "") {
+  //     setDisplayedCustomers(customers);
+  //     return;
+  //   }
+  //   setDisplayedCustomers(fetchedCustomer);
+  // };
 
   useEffect(() => {
     fetchCustomers();
@@ -95,7 +95,7 @@ function CustomerDetails() {
                   onChange={updateName}
                 ></input>
               </div>
-              <div>
+              {/* <div>
                 <label for="phoneInput">Phone Number : </label>
                 <input
                   type="number"
@@ -104,7 +104,7 @@ function CustomerDetails() {
                   value={phoneNumber}
                   onChange={updatePhoneNumber}
                 ></input>
-              </div>
+              </div> */}
               <div>
                 <label for="emailInput">Email Id : </label>
                 <input

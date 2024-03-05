@@ -30,7 +30,6 @@ function Customer(){
         }catch(err){
             console.log("hello");
         }
-
     }
 
     const backButton = ()=>{
@@ -40,7 +39,7 @@ function Customer(){
     useEffect(()=>{
         fetchCustomer();
         return ()=>{}
-    })
+    },[])
 
     return <div className="customer">
         <Header isSignedIn = {true} />

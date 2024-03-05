@@ -1,8 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import "./BookDetailBar.css"
 
 function BookDetailBar(props) {
+
+    const navigate = useNavigate();
+
+    const goToBookDetail = ()=>{
+        navigate(`/books/${props.book._id}`);
+    }
+
   return (
-    <div className="book-detail-bar">
+    <div className="book-detail-bar" onClick={goToBookDetail}>
         <div className="title">
             <h4>{props.book.title}</h4>
         </div>

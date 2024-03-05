@@ -2,12 +2,22 @@ import { useState } from "react";
 import Header from "../../components/Header/Header";
 import SideBar from "../../components/SideBar/SideBar";
 import "./IssuePage.css";
+import { todayDate } from "../../Modules/date";
+import { issueBookApi } from "../../api/customer";
 
 function IssuePage() {
   const [customerId, setCustomerId] = useState();
   const [bookId, setBookId] = useState();
-  const [issueDate, setIssueDate] = useState();
-  const [returnDate, setReturnDate] = useState();
+  const [issueDate, setIssueDate] = useState(todayDate(0));
+  const [returnDate, setReturnDate] = useState(todayDate(7));
+
+  const details = {
+    customerId : customerId,
+    bookId : bookId,
+    issueDate : issueDate,
+    returnDate : returnDate
+  }
+
 
   const updateCustomerId = (e) => {
     setCustomerId(e.target.value);
@@ -25,6 +35,13 @@ function IssuePage() {
     setReturnDate(e.target.value);
   };
 
+  const issueBook = async(e) =>{
+    e.preventDefault();
+    const response = await issueBookApi(details);
+    console.log(response);
+    console.log("hello")
+  }
+
   return (
     <div className="issue-page">
       <Header isSignedin={true} />
@@ -34,7 +51,7 @@ function IssuePage() {
           <h1>Issue A Book</h1>
         </div>
         <div className="sub-div">
-          <form>
+          <form onSubmit={issueBook}>
             <div>
               <label for="customerId">Customer Id : </label>
               <input
@@ -43,6 +60,7 @@ function IssuePage() {
                 onChange={updateCustomerId}
                 type="number"
                 value={customerId}
+                required
               ></input>
             </div>
             <div>
@@ -53,6 +71,7 @@ function IssuePage() {
                 onChange={updateBookId}
                 type="number"
                 value={bookId}
+                required
               ></input>
             </div>
             <div>
@@ -63,6 +82,7 @@ function IssuePage() {
                 onChange={updateIssueDate}
                 type="date"
                 value={issueDate}
+                required
               ></input>
             </div>
             <div>
@@ -73,6 +93,7 @@ function IssuePage() {
                 onChange={updateReturnDate}
                 type="date"
                 value={returnDate}
+                required
               ></input>
             </div>
             <button type="submit">Issue Book</button>

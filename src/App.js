@@ -11,6 +11,7 @@ import Books from './pages/Books/Books';
 import CustomerDetails from './pages/CustomerDetail/CustomerDetail';
 import Customer from './pages/Customer/Customer';
 import IssuePage from './pages/IssuePage/IssuePage';
+import BookDetail from './pages/BookDetail/BookDetail';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/customers' element={<CustomerDetails />} />
         <Route path='/customers/:id' element={<Customer />} />
         <Route path="/customers/issue" element={<IssuePage />} />
+        <Route path="/books/:id" element={<BookDetail />} />
       </Routes>
     </Router>
   );
