@@ -12,6 +12,7 @@ import CustomerDetails from './pages/CustomerDetail/CustomerDetail';
 import Customer from './pages/Customer/Customer';
 import IssuePage from './pages/IssuePage/IssuePage';
 import BookDetail from './pages/BookDetail/BookDetail';
+import EditBookPage from './pages/EditBookPage/EditBookPage';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/customers/:id' element={<Customer />} />
         <Route path="/customers/issue" element={<IssuePage />} />
         <Route path="/books/:id" element={<BookDetail />} />
+        <Route path="/books/edit/:id" element={<EditBookPage />} />
       </Routes>
     </Router>
   );

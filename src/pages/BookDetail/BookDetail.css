@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
+}
+
+.book-detail .book-detail-div{
+    position: relative;
+    top: 10vh;
+    left: 20vw;
+    border: 1px solid red;
+    height: 90vh;
+    width: 80vw;
+}
+
+.book-detail .h-10{
+    height: 10%
+}
+
+.book-detail .sub-div{
+    height: 90%;
+    width: 100%;
+    border : 1px solid yellow
+}
+
+.book-detail .right-panel{
+    height: 100%;
+    width: 50%;
+    border: 1px solid green;
+    overflow-y: auto;
+
+}
+
+.book-detail img{
+    max-height: 100%;
+    max-width: 50%;
+}
+
+.book-detail .panel{
+    height: 90%;
+    width: 100%;
+    display: flex;
+
+}
+
+.book-detail .title-div{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.book-detail .author-div{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-detail .uid-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-detail .description-div{
+    min-height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-detail .issued-to{
+    min-height: 10%;
+}
+
+.book-detail .right-panel div{
+    border :1px solid black
+}
+
+.book-detail .left-panel{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.book-detail .button-div{
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.book-detail .button-div button{
+    height: 90%;
+    width: 30%;
+}

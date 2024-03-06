@@ -22,3 +22,12 @@ export const getBooksApi = async() => {
         return err.response.data;
     }
 }
+
+export const getBookByIdApi = async(id) => {
+    try{
+        const response = await axios.get(`http://localhost:8000/api/books/${id}`);
+        return response;
+    }catch(err){
+        return err.response;
+    }
+}
