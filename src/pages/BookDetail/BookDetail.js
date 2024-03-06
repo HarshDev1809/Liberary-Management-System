@@ -40,7 +40,7 @@ function BookDetail() {
   };
 
   const goToEditBookPage = ()=>{
-    navigate("")
+    navigate(`/books/edit/${id}`)
   }
 
   useEffect(() => {

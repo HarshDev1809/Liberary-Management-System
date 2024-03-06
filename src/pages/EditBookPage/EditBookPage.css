@@ -1,0 +1,82 @@
+.edit-book .edit-book-div{
+    border: 1px solid red;
+    position: relative;
+    top : 10vh;
+    left : 20vw;
+    width: 80vw;
+    box-sizing: border-box;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.edit-book-div .form-div{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid red;
+    
+}
+
+.edit-book form{
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit-book form input{
+    font-size: 1rem;
+}
+
+.edit-book form div{
+    border: 1px solid brown;
+    height: 11%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap : 10px;
+    font-size: 1.3em;
+    width: 100%;
+}
+
+.edit-book fieldset{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid;
+    font-size: 1em;
+    border: 1px solid purple;
+    width: 100%;
+    
+}
+
+.edit-book fieldset div{
+    height: 100%;
+    font-size: 1rem;
+    width: 10%;
+}   
+
+.edit-book fieldset legend{
+    width: auto;
+}
+
+.edit-book form #titleInput{
+    width: 50%;
+}
+
+.edit-book form #authorInput{
+    width: 50%;
+}
+
+.edit-book form #descriptionInput{
+    width: 85%;
+}
+
+
+/* .new-book . */

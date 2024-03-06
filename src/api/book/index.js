@@ -31,3 +31,16 @@ export const getBookByIdApi = async(id) => {
         return err.response;
     }
 }
+
+export const editBookApi = async(id,newDetails) => {
+    try{
+        const token = sessionStorage.getItem("token");
+        const response = await axios.put(`http://localhost:8000/api/books/edit/${id}`,newDetails,{
+        headers: {
+            "x-access-token": token,
+    }},)
+    return response;
+    }catch(err){
+        return err.response
+    }
+}
